@@ -1,0 +1,11 @@
+{
+  "name": "wastewater",
+  "version": "1.0.0",
+  "description": "report data to db from rs485 signal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

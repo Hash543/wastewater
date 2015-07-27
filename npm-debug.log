@@ -1,0 +1,194 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   'modbus' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose install initial load of D:\project\wastewater\package.json
+5 warn package.json wastewater@1.0.0 No repository field.
+6 warn package.json wastewater@1.0.0 No README data
+7 verbose installManyTop reading scoped package data from D:\project\wastewater\node_modules\node-modbus\package.json
+8 verbose installManyTop reading scoped package data from D:\project\wastewater\node_modules\serialport\package.json
+9 info package.json node-modbus@0.1.0 No license field.
+10 info package.json serialport@1.7.4 No license field.
+11 verbose readDependencies loading dependencies from D:\project\wastewater\package.json
+12 silly cache add args [ 'modbus', null ]
+13 verbose cache add spec modbus
+14 silly cache add parsed spec { raw: 'modbus',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'modbus',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: '*',
+14 silly cache add   type: 'range' }
+15 silly addNamed modbus@*
+16 verbose addNamed "*" is a valid semver range for modbus
+17 silly addNameRange { name: 'modbus', range: '*', hasData: false }
+18 silly mapToRegistry name modbus
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/modbus
+22 verbose addNameRange registry:https://registry.npmjs.org/modbus not in flight; fetching
+23 verbose request uri https://registry.npmjs.org/modbus
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 12:45:03
+26 verbose request id 93751b5d69bc18cf
+27 verbose etag "BPUH1MRHSVB6IZQUYQMS5YTPX"
+28 http request GET https://registry.npmjs.org/modbus
+29 http 304 https://registry.npmjs.org/modbus
+30 silly get cb [ 304,
+30 silly get   { date: 'Mon, 27 Jul 2015 04:44:43 GMT',
+30 silly get     via: '1.1 varnish',
+30 silly get     'cache-control': 'max-age=60',
+30 silly get     etag: '"BPUH1MRHSVB6IZQUYQMS5YTPX"',
+30 silly get     age: '0',
+30 silly get     connection: 'keep-alive',
+30 silly get     'x-served-by': 'cache-nrt6121-NRT',
+30 silly get     'x-cache': 'MISS',
+30 silly get     'x-cache-hits': '0',
+30 silly get     'x-timer': 'S1437972283.098895,VS0,VE176',
+30 silly get     vary: 'Accept' } ]
+31 verbose etag https://registry.npmjs.org/modbus from cache
+32 verbose get saving modbus to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\modbus\.cache.json
+33 silly addNameRange number 2 { name: 'modbus', range: '*', hasData: true }
+34 silly addNameRange versions [ 'modbus',
+34 silly addNameRange   [ '0.0.1',
+34 silly addNameRange     '0.0.2',
+34 silly addNameRange     '0.0.3',
+34 silly addNameRange     '0.0.4',
+34 silly addNameRange     '0.0.5',
+34 silly addNameRange     '0.0.6',
+34 silly addNameRange     '0.0.7',
+34 silly addNameRange     '0.0.8',
+34 silly addNameRange     '0.0.9',
+34 silly addNameRange     '0.0.10',
+34 silly addNameRange     '0.0.11',
+34 silly addNameRange     '0.0.12',
+34 silly addNameRange     '0.0.13' ] ]
+35 silly addNamed modbus@0.0.13
+36 verbose addNamed "0.0.13" is a plain semver version for modbus
+37 silly cache afterAdd modbus@0.0.13
+38 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\modbus\0.0.13\package\package.json not in flight; writing
+39 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\modbus\0.0.13\package\package.json written
+40 silly install resolved [ { name: 'modbus',
+40 silly install resolved     version: '0.0.13',
+40 silly install resolved     description: 'libmodbus binding',
+40 silly install resolved     keywords: [ 'modbus' ],
+40 silly install resolved     main: 'modbus.js',
+40 silly install resolved     engines: { node: '>= 0.8.0' },
+40 silly install resolved     scripts:
+40 silly install resolved      { install: './make_libmodbus.sh && node-gyp configure --python=python2 && node-gyp build',
+40 silly install resolved        preuninstall: 'rm -rf libmodbus build' },
+40 silly install resolved     author: { name: 'Davydov Denis', email: 'mail@tuxnsk.ru' },
+40 silly install resolved     maintainers: [ [Object] ],
+40 silly install resolved     repository:
+40 silly install resolved      { type: 'git',
+40 silly install resolved        url: 'git+https://github.com/tuxnsk/nodejs_libmodbus.git' },
+40 silly install resolved     license: 'BSD',
+40 silly install resolved     gitHead: '40574c8876af3a8b56e64b34b2623dbf45b8e811',
+40 silly install resolved     bugs: { url: 'https://github.com/tuxnsk/nodejs_libmodbus/issues' },
+40 silly install resolved     homepage: 'https://github.com/tuxnsk/nodejs_libmodbus',
+40 silly install resolved     _id: 'modbus@0.0.13',
+40 silly install resolved     _shasum: '40e76e9557df992bcbf802f8cf7756002fbb40c7',
+40 silly install resolved     _from: 'modbus@*',
+40 silly install resolved     _npmVersion: '2.0.2',
+40 silly install resolved     _nodeVersion: '0.10.32',
+40 silly install resolved     _npmUser: { name: 'tuxnsk', email: 'mail@tuxnsk.ru' },
+40 silly install resolved     dist:
+40 silly install resolved      { shasum: '40e76e9557df992bcbf802f8cf7756002fbb40c7',
+40 silly install resolved        tarball: 'http://registry.npmjs.org/modbus/-/modbus-0.0.13.tgz' },
+40 silly install resolved     directories: {},
+40 silly install resolved     _resolved: 'https://registry.npmjs.org/modbus/-/modbus-0.0.13.tgz',
+40 silly install resolved     readme: 'ERROR: No README data found!' } ]
+41 info install modbus@0.0.13 into D:\project\wastewater
+42 info installOne modbus@0.0.13
+43 verbose installOne of modbus to D:\project\wastewater not in flight; installing
+44 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\modbus-f0dff40a8984e132.lock for D:\project\wastewater\node_modules\modbus
+45 silly install write writing modbus 0.0.13 to D:\project\wastewater\node_modules\modbus
+46 verbose unbuild node_modules\modbus
+47 silly gentlyRm D:\project\wastewater\node_modules\modbus is being purged from base D:\project\wastewater
+48 verbose gentlyRm don't care about contents; nuking D:\project\wastewater\node_modules\modbus
+49 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\modbus\0.0.13\package.tgz
+50 verbose tar unpacking to D:\project\wastewater\node_modules\modbus
+51 silly gentlyRm D:\project\wastewater\node_modules\modbus is being purged
+52 verbose gentlyRm don't care about contents; nuking D:\project\wastewater\node_modules\modbus
+53 silly gunzTarPerm modes [ '777', '666' ]
+54 silly gunzTarPerm extractEntry package.json
+55 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+56 silly gunzTarPerm extractEntry README.md
+57 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+58 silly gunzTarPerm extractEntry modbus.js
+59 silly gunzTarPerm modified mode [ 'modbus.js', 420, 438 ]
+60 silly gunzTarPerm extractEntry binding.gyp
+61 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+62 silly gunzTarPerm extractEntry configure.patch
+63 silly gunzTarPerm modified mode [ 'configure.patch', 420, 438 ]
+64 silly gunzTarPerm extractEntry examples/master.js
+65 silly gunzTarPerm modified mode [ 'examples/master.js', 420, 438 ]
+66 silly gunzTarPerm extractEntry examples/master_native.js
+67 silly gunzTarPerm modified mode [ 'examples/master_native.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry examples/slave.js
+69 silly gunzTarPerm modified mode [ 'examples/slave.js', 420, 438 ]
+70 silly gunzTarPerm extractEntry make_libmodbus.sh
+71 silly gunzTarPerm modified mode [ 'make_libmodbus.sh', 493, 511 ]
+72 silly gunzTarPerm extractEntry mt.patch
+73 silly gunzTarPerm modified mode [ 'mt.patch', 420, 438 ]
+74 silly gunzTarPerm extractEntry src/main.cpp
+75 silly gunzTarPerm modified mode [ 'src/main.cpp', 420, 438 ]
+76 silly gunzTarPerm extractEntry wscript
+77 silly gunzTarPerm modified mode [ 'wscript', 420, 438 ]
+78 verbose write writing to D:\project\wastewater\node_modules\modbus\package.json
+79 info preinstall modbus@0.0.13
+80 verbose readDependencies loading dependencies from D:\project\wastewater\node_modules\modbus\package.json
+81 verbose readDependencies loading dependencies from D:\project\wastewater\node_modules\modbus\package.json
+82 silly install resolved []
+83 verbose about to build D:\project\wastewater\node_modules\modbus
+84 info build D:\project\wastewater\node_modules\modbus
+85 info linkStuff modbus@0.0.13
+86 silly linkStuff modbus@0.0.13 has D:\project\wastewater\node_modules as its parent node_modules
+87 verbose linkBins modbus@0.0.13
+88 verbose linkMans modbus@0.0.13
+89 verbose rebuildBundles modbus@0.0.13
+90 info install modbus@0.0.13
+91 verbose unsafe-perm in lifecycle true
+92 info modbus@0.0.13 Failed to exec install script
+93 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\modbus-f0dff40a8984e132.lock for D:\project\wastewater\node_modules\modbus
+94 verbose stack Error: modbus@0.0.13 install: `./make_libmodbus.sh && node-gyp configure --python=python2 && node-gyp build`
+94 verbose stack Exit status 1
+94 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:213:16)
+94 verbose stack     at EventEmitter.emit (events.js:110:17)
+94 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+94 verbose stack     at ChildProcess.emit (events.js:110:17)
+94 verbose stack     at maybeClose (child_process.js:1015:16)
+94 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+95 verbose pkgid modbus@0.0.13
+96 verbose cwd D:\project\wastewater
+97 error Windows_NT 6.1.7601
+98 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "modbus"
+99 error node v0.12.4
+100 error npm  v2.10.1
+101 error code ELIFECYCLE
+102 error modbus@0.0.13 install: `./make_libmodbus.sh && node-gyp configure --python=python2 && node-gyp build`
+102 error Exit status 1
+103 error Failed at the modbus@0.0.13 install script './make_libmodbus.sh && node-gyp configure --python=python2 && node-gyp build'.
+103 error This is most likely a problem with the modbus package,
+103 error not with npm itself.
+103 error Tell the author that this fails on your system:
+103 error     ./make_libmodbus.sh && node-gyp configure --python=python2 && node-gyp build
+103 error You can get their info via:
+103 error     npm owner ls modbus
+103 error There is likely additional logging output above.
+104 verbose exit [ 1, true ]
+105 verbose unbuild node_modules\modbus
+106 info preuninstall modbus@0.0.13
+107 verbose unsafe-perm in lifecycle true
+108 info modbus@0.0.13 Failed to exec preuninstall script
+109 warn continuing anyway modbus@0.0.13 preuninstall: `rm -rf libmodbus build`
+109 warn continuing anyway Exit status 1
+110 info uninstall modbus@0.0.13
+111 verbose unbuild rmStuff modbus@0.0.13 from D:\project\wastewater\node_modules
+112 info postuninstall modbus@0.0.13
+113 silly gentlyRm D:\project\wastewater\node_modules\modbus is being purged from base D:\project\wastewater
+114 verbose gentlyRm don't care about contents; nuking D:\project\wastewater\node_modules\modbus
+115 silly vacuum-fs purging D:\project\wastewater\node_modules\modbus
+116 silly vacuum-fs quitting because other entries in D:\project\wastewater\node_modules
