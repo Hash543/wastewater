@@ -5,7 +5,11 @@ import minimalmodbus
 import urllib
 import pycurl
 import pprint
+import RPi.GPIO as GPIO ## Import GPIO library
+import time ## Import 'time' library. Allows us to use 'sleep'
+chanel = 7
 from StringIO import StringIO
+##Define a function named Blink()
 try:
 	buffer = StringIO()
 	CURL_HOST = "http://www.da-tung.com"
@@ -29,6 +33,9 @@ try:
 	c.setopt(c.WRITEDATA, buffer)
 	c.perform()
 	c.close()
+	decodejson = json.loads(buffer.getvalue());
+	if decodejson['notice'] == "true" :
+		os.system("sudo python /home/pi/wastewater/RPIONotice.py")
 except Exception as inst:
    	print type(inst)     # the exception instance
    	print inst.args      # arguments stored in .args
@@ -37,6 +44,6 @@ except Exception as inst:
    	print 'x =', x
    	print 'y =', y
 else:
-	print(url)
-	print(buffer.getvalue())
+	print(url);
+	print(buffer.getvalue());
 	print(os.getenv('CUSTOMERID'))
