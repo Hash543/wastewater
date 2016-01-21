@@ -10,7 +10,7 @@ try:
 	buffer = StringIO()
 	CURL_HOST = "http://www.da-tung.com"
 	CURL_PATH = "/jobs/receive.php?"
-	instrument = minimalmodbus.Instrument('/dev/ttyUSB3', 1) # port name, slave address (in decimal)
+	instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1) # port name, slave address (in decimal)
 	instrument.serial.baudrate = 9600
 	## Read temperature (PV = ProcessValue) ##
 	# Registernumber, number of decimals
@@ -29,10 +29,6 @@ try:
 	c.setopt(c.WRITEDATA, buffer)
 	c.perform()
 	c.close()
-except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
-except ValueError:
-    print "Could not convert data to an integer."
 except Exception as inst:
    	print type(inst)     # the exception instance
    	print inst.args      # arguments stored in .args
