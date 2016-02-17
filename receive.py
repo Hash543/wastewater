@@ -29,7 +29,7 @@ try:
 			i = 10
 			dataList = [ph,ec,tss]
 		except:
-			i++
+			i += 1
 	url = CURL_HOST + CURL_PATH
 	c = pycurl.Curl()
 	c.setopt(c.URL, url )
