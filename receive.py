@@ -1,4 +1,4 @@
-﻿#!/usr/bin/python
+#!/usr/bin/python
 import os
 import json
 import minimalmodbus
@@ -14,20 +14,27 @@ try:
 	buffer = StringIO()
 	CURL_HOST = "http://www.da-tung.com"
 	CURL_PATH = "/jobs/receive.php?"
-	instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1) # port name, slave address (in decimal)
-	instrument.serial.baudrate = 9600
-	## Read temperature (PV = ProcessValue) ##
-	# Registernumber, number of decimals
-	ph = instrument.read_register(0, 1 , 4) 
-	# ec = 
-	ec = instrument.read_register(6, 1 , 4) 
-	# tss = 
-	tss = instrument.read_register(13, 1 , 4) 
+	i = 1
+	while i < 10:
+		try:
+			instrument = minimalmodbus.Instrument('/dev/ttyUSB0', 1) # port name, slave address (in decimal)
+			instrument.serial.baudrate = 9600
+			## Read temperature (PV = ProcessValue) ##
+			# Registernumber, number of decimals
+			ph = instrument.read_register(0, 1 , 4) 
+			# ec = 
+			ec = instrument.read_register(6, 1 , 4) 
+			# tss = 
+			tss = instrument.read_register(13, 1 , 4) 	
+			i = 10
+			dataList = [ph,ec,tss]
+		except:
+			i++
 	url = CURL_HOST + CURL_PATH
 	c = pycurl.Curl()
 	c.setopt(c.URL, url )
 	#pprint.pprint(c.POST)
-	postData = {"ph": ph,"ec": ec,"tss": tss,"cid": os.getenv('CUSTOMERID')};
+	postData = {"ph": dataList[0],"ec": dataList[1],"tss": dataList[2],"cid": os.getenv('CUSTOMERID')};
 	c.setopt(c.POSTFIELDS, urllib.urlencode(postData))
 
 	c.setopt(c.WRITEDATA, buffer)
